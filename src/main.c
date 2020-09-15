@@ -134,8 +134,8 @@ int main()
 
     // VBLTask initialization
     vblTask.vblAddr = (VBLProcPtr) vblInterrupt;
-    vblTask.vblCount = bVBLInterval; /* Frequency of task, in ticks */
-    vblTask.qType = vType;       /* qElement is a VBL task */
+    vblTask.vblCount = bVBLInterval; // Frequency of task, in ticks
+    vblTask.qType = vType;           // qElement is a VBL task
     vblTask.vblPhase = 0;
     err = VInstall((QElemPtr)&vblTask);
     if (err != noErr)
